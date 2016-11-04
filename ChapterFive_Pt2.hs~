@@ -8,7 +8,7 @@ getPaperTitle paper = head paper
 
 -- getPaperKeywords --
 getPaperKeywords :: [a] -> a
-getPaperKeywords paper = last paper
+getPaperTitle paper = last paper
 
 -- extractAllKeywords --
 -- keywordInList --
