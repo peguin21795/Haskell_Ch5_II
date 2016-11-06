@@ -12,8 +12,8 @@ main = do
     testgetPaperKeywords    
     testExtractAllKeywords
     testKeywordInList
-    --testExistsPaper
-    --testCountPapers
+    testExistsPaper
+    testCountPapers
 
 testGetPaperTitle = Control.Exception.catch (do
         putStrLn $ "\n------ Testing getPaperTitle ------"
@@ -59,7 +59,7 @@ testKeywordInList  = Control.Exception.catch (do
                 handler :: SomeException -> IO ()
                 handler ex = putStrLn $ "Exception: " ++ show ex
 
-{-
+
 testExistsPaper  = Control.Exception.catch (do
         putStrLn $ "\n------ Testing existsPaper ------"
         assertEqual "Faild to see if a paper exits"[["Design Patterns","Games","Pedagogy","Java"],["Object-orientation","Design Patterns"],["Design Patterns","Game of Life","CS1","Laboratory"]] (existsPaper "Design Patterns" papers)
@@ -80,7 +80,7 @@ testCountPapers  = Control.Exception.catch (do
             where
                 handler :: SomeException -> IO ()
                 handler ex = putStrLn $ "Exception: " ++ show ex
--}
+
 
 
 -- PLEASE COPY THESE BINDINGS INTO YOUR FILE. 
